@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="main-css/main.css">
+</head>
+<body>
+  Column Master
+  <div>
+    <button type="button" onclick="fnAddColumn()">Add Column</button>
+      <div id="abc" >
+        <div id="popUp">
+          <h2>Add Column Here</h2>
+          <form id="form">
+            <img id="close" src="exit-closed-symbol-md.png" onclick="closePopUp()">
+            Column name: <input type="text" name="columnName" id="columnName"><br>
+            Column Type: 
+              <select id="datatype">
+                <option value="number" selected="selected">Number</option>
+                <option value="string">String</option>
+                <option value="boolean">Boolean</option>
+              </select><br>
+            Editable:
+              <select id="editable">
+                <option value="yes" selected="selected">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            <button onclick="fnAddColumnPopup()">Add Column</button>
+            <button>Close without Adding</button><br>
+          </form>
+        </div>
+      </div>
+      <button type="button" >Remove Column</button>
+  </div>
+  <table border="1" id="tableColData">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Column Name</th>
+        <th>Column Type</th>
+        <th>Editable</th>
+      </tr>
+    </thead>
+  </table>
+  <script type="text/javascript" src="main-js\addColPopUp.js"></script>
+</body>
+</html>
